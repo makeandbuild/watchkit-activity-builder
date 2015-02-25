@@ -16,7 +16,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var notesTextView: UITextView!
     
     
-    var activityData:Step? = nil
+    var step:Step? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,8 +26,8 @@ class DetailViewController: UIViewController {
         
 //        titleTextField.text = activityData.objectForKey("itemTitle") as? String
 //        notesTextView.text = activityData.objectForKey("itemNote") as? String
-        titleTextField.text = activityData?.name ?? ""
-        notesTextView.text = activityData?.detail ?? ""
+        titleTextField.text = step?.name ?? ""
+        notesTextView.text = step?.detail ?? ""
 
         
         // todo - change to use core data
@@ -43,29 +43,11 @@ class DetailViewController: UIViewController {
     
     @IBAction func deleteItem(sender: AnyObject) {
         
-        // TODO: fix me
-        
-//        var userDefaults:NSUserDefaults = NSUserDefaults(suiteName: "group.com.makeandbuild.activitybuilder")!
-//        var itemListArray:NSMutableArray = userDefaults.objectForKey("itemList") as NSMutableArray
-//        var mutableItemList:NSMutableArray = NSMutableArray()
-//        
-//        for dict:AnyObject in itemListArray{
-//            mutableItemList.addObject(dict as NSDictionary)
-//        }
-//        
-//        mutableItemList.removeObject(activityData)
-//        
-//        // TODO: use core data
-//        userDefaults.removeObjectForKey("itemList")
-//        userDefaults.setObject(mutableItemList, forKey: "itemList")
-//        userDefaults.synchronize()
+        if (step != nil) {
+            StepManager.deleteStep(step!)
+        }
         
         self.navigationController?.popToRootViewControllerAnimated(true)
-        
     }
-    
-
-
-
 
 }

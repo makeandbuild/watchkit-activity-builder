@@ -44,39 +44,10 @@ class AddViewController: UIViewController {
     */
 
     @IBAction func addButtonTapped(sender: AnyObject) {
-        println("Button tabbed")
+        println("Add button tapped")
         
-        var newStep = StepManager.createStepManaged(titleTextField.text, detail: notesTextView.text, number: 1, status: "")
+        var newStep = StepManager.createStep(titleTextField.text, detail: notesTextView.text, number: 1, status: "")
         
-        
-        // todo: change to use core data
-//        var userDefaults:NSUserDefaults = NSUserDefaults(suiteName: "group.com.makeandbuild.activitybuilder")!
-//        
-//        var itemList:NSMutableArray? = userDefaults.objectForKey("itemList") as? NSMutableArray
-//        
-//        
-//        var dataSet:NSMutableDictionary = NSMutableDictionary()
-//        dataSet.setObject(titleTextField.text, forKey: "itemTitle")
-//        dataSet.setObject(notesTextView.text, forKey: "itemNote")
-//
-//        if (itemList != nil) { // data already avaliable
-//            var newMutableList:NSMutableArray = NSMutableArray()
-//            for dict:AnyObject in itemList! {
-//                newMutableList.addObject(dict as NSDictionary)
-//            }
-//            
-//            userDefaults.removeObjectForKey("itemList")
-//            newMutableList.addObject(dataSet)
-//            userDefaults.setObject(newMutableList, forKey: "itemList")
-//        }
-//        // first item in the list
-//        else {
-//            itemList = NSMutableArray()
-//            itemList!.addObject(dataSet)
-//            userDefaults.setObject(itemList, forKey: "itemList")
-//        }
-//        userDefaults.synchronize()
         self.navigationController?.popToRootViewControllerAnimated(true)
-        
     }
 }

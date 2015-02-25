@@ -120,7 +120,7 @@ class ViewController: UITableViewController {
             var selectedIndexPath:NSIndexPath = self.tableView.indexPathForSelectedRow()!
             var detailViewController:DetailViewController = segue.destinationViewController as! DetailViewController
 //            detailViewController.activityData = activityItems.objectAtIndex(selectedIndexPath.row) as NSDictionary
-            detailViewController.activityData = steps[selectedIndexPath.row] as? Step
+            detailViewController.step = steps[selectedIndexPath.row] as? Step
             
         }
         

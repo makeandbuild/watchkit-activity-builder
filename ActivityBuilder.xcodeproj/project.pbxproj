@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FD2C81D61A9CE8FF00679983 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2C81D51A9CE8FF00679983 /* DataManager.swift */; };
 		FD2C81D81A9CECB700679983 /* StepManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2C81D71A9CECB700679983 /* StepManager.swift */; };
 		FD2C81E91A9CFD4700679983 /* WatchCoreDataProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = FD2C81E81A9CFD4700679983 /* WatchCoreDataProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FD2C81EF1A9CFD4700679983 /* WatchCoreDataProxy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD2C81E41A9CFD4700679983 /* WatchCoreDataProxy.framework */; };
@@ -18,7 +17,6 @@
 		FD2C820A1A9D4BB100679983 /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2C82091A9D4BB100679983 /* Step.swift */; };
 		FD2C820C1A9D4BB200679983 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2C820B1A9D4BB200679983 /* Activity.swift */; };
 		FD2C820E1A9D4FEE00679983 /* StepManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2C820D1A9D4FEE00679983 /* StepManager.swift */; };
-		FD5AED101A9E2C790094FE50 /* WatchCoreDataProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2C82071A9D02B800679983 /* WatchCoreDataProxy.swift */; };
 		FD5CA9691A9B8EA400AE72E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5CA9681A9B8EA400AE72E1 /* AppDelegate.swift */; };
 		FD5CA96E1A9B8EA400AE72E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5CA96D1A9B8EA400AE72E1 /* ViewController.swift */; };
 		FD5CA9711A9B8EA400AE72E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD5CA96F1A9B8EA400AE72E1 /* Main.storyboard */; };
@@ -110,7 +108,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		FD2C81D51A9CE8FF00679983 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		FD2C81D71A9CECB700679983 /* StepManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepManager.swift; sourceTree = "<group>"; };
 		FD2C81E41A9CFD4700679983 /* WatchCoreDataProxy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WatchCoreDataProxy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD2C81E71A9CFD4700679983 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -281,7 +278,6 @@
 				FD5CA96D1A9B8EA400AE72E1 /* ViewController.swift */,
 				FD5CA98B1A9B942E00AE72E1 /* AddViewController.swift */,
 				FD5CA98D1A9B947A00AE72E1 /* DetailViewController.swift */,
-				FD2C81D51A9CE8FF00679983 /* DataManager.swift */,
 				FD5CA96F1A9B8EA400AE72E1 /* Main.storyboard */,
 				FD5CA9721A9B8EA400AE72E1 /* Images.xcassets */,
 				FD5CA9741A9B8EA400AE72E1 /* LaunchScreen.xib */,
@@ -361,15 +357,23 @@
 		FD73291B1A9E24CF007EE8E8 /* WatchCoreDataProxy */ = {
 			isa = PBXGroup;
 			children = (
-				FD73291C1A9E24CF007EE8E8 /* Activity.swift */,
+				FD8B2BCE1A9E780100C77A80 /* model */,
 				FD73291D1A9E24CF007EE8E8 /* Info.plist */,
 				FD73291E1A9E24CF007EE8E8 /* Model.xcdatamodeld */,
-				FD7329201A9E24CF007EE8E8 /* Step.swift */,
 				FD7329211A9E24CF007EE8E8 /* StepManager.swift */,
 				FD7329221A9E24CF007EE8E8 /* WatchCoreDataProxy.h */,
 				FD7329231A9E24CF007EE8E8 /* WatchCoreDataProxy.swift */,
 			);
 			path = WatchCoreDataProxy;
+			sourceTree = "<group>";
+		};
+		FD8B2BCE1A9E780100C77A80 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				FD73291C1A9E24CF007EE8E8 /* Activity.swift */,
+				FD7329201A9E24CF007EE8E8 /* Step.swift */,
+			);
+			name = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -640,9 +644,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD5AED101A9E2C790094FE50 /* WatchCoreDataProxy.swift in Sources */,
 				FD5CA96E1A9B8EA400AE72E1 /* ViewController.swift in Sources */,
-				FD2C81D61A9CE8FF00679983 /* DataManager.swift in Sources */,
 				FD5CA98E1A9B947A00AE72E1 /* DetailViewController.swift in Sources */,
 				FD2C81D81A9CECB700679983 /* StepManager.swift in Sources */,
 				FD5CA98C1A9B942E00AE72E1 /* AddViewController.swift in Sources */,

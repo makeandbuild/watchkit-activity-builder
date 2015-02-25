@@ -22,7 +22,7 @@ public class StepManager: NSObject {
         return WatchCoreDataProxy.sharedInstance.managedObjectContext!
     }
     
-    public class func createStepManaged(name: String, detail: String, number: Int16, status: String) -> Step {
+    public class func createStep(name: String, detail: String, number: Int16, status: String) -> Step {
         
         let newStep: Step = NSEntityDescription.insertNewObjectForEntityForName("Step", inManagedObjectContext: getContext()) as! Step
         
@@ -31,11 +31,7 @@ public class StepManager: NSObject {
         newStep.number = number
         newStep.status = status
         
-        var error : NSError? = nil
-        if !getContext().save(&error) {
-            NSLog("Unresolved error saving step \(error), \(error!.userInfo)")
-            abort()
-        }
+        saveManagedContext()
         
         return newStep
     }
@@ -62,6 +58,19 @@ public class StepManager: NSObject {
         }
         else {
             return []
+        }
+    }
+    
+    public class func deleteStep(step:Step) {
+        getContext().deleteObject(step)
+        saveManagedContext()
+    }
+    
+    class func saveManagedContext() {
+        var error : NSError? = nil
+        if !getContext().save(&error) {
+            NSLog("Unresolved error saving context \(error), \(error!.userInfo)")
+            abort()
         }
     }
 
