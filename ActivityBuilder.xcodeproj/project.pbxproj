@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD24C1901A9E896300DB38D3 /* StartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD24C18F1A9E896300DB38D3 /* StartController.swift */; };
 		FD2C81D81A9CECB700679983 /* StepManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2C81D71A9CECB700679983 /* StepManager.swift */; };
 		FD2C81E91A9CFD4700679983 /* WatchCoreDataProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = FD2C81E81A9CFD4700679983 /* WatchCoreDataProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FD2C81EF1A9CFD4700679983 /* WatchCoreDataProxy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD2C81E41A9CFD4700679983 /* WatchCoreDataProxy.framework */; };
@@ -34,7 +35,9 @@
 		FD5CA9AD1A9BBB6200AE72E1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD5CA9AC1A9BBB6200AE72E1 /* Images.xcassets */; };
 		FD5CA9B01A9BBB6200AE72E1 /* ActivityBuilder WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FD5CA9931A9BBB6200AE72E1 /* ActivityBuilder WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FD5CA9B91A9BC61200AE72E1 /* ActivityRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5CA9B81A9BC61200AE72E1 /* ActivityRow.swift */; };
-		FD7001D01A9BFD3B007CF710 /* ZoomActivityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7001CF1A9BFD3B007CF710 /* ZoomActivityController.swift */; };
+		FD7A9D5D1A9F585F003D5FFF /* ActiveStepController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7A9D5C1A9F585F003D5FFF /* ActiveStepController.swift */; };
+		FD7A9D5F1A9F5A30003D5FFF /* ActiveStepConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7A9D5E1A9F5A30003D5FFF /* ActiveStepConfig.swift */; };
+		FD8B2BD01A9E801A00C77A80 /* DetailActivityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8B2BCF1A9E801A00C77A80 /* DetailActivityController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +111,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		FD24C18F1A9E896300DB38D3 /* StartController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartController.swift; sourceTree = "<group>"; };
 		FD2C81D71A9CECB700679983 /* StepManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepManager.swift; sourceTree = "<group>"; };
 		FD2C81E41A9CFD4700679983 /* WatchCoreDataProxy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WatchCoreDataProxy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD2C81E71A9CFD4700679983 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -154,6 +158,9 @@
 		FD7329211A9E24CF007EE8E8 /* StepManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepManager.swift; sourceTree = "<group>"; };
 		FD7329221A9E24CF007EE8E8 /* WatchCoreDataProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WatchCoreDataProxy.h; sourceTree = "<group>"; };
 		FD7329231A9E24CF007EE8E8 /* WatchCoreDataProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchCoreDataProxy.swift; sourceTree = "<group>"; };
+		FD7A9D5C1A9F585F003D5FFF /* ActiveStepController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveStepController.swift; sourceTree = "<group>"; };
+		FD7A9D5E1A9F5A30003D5FFF /* ActiveStepConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveStepConfig.swift; sourceTree = "<group>"; };
+		FD8B2BCF1A9E801A00C77A80 /* DetailActivityController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailActivityController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -315,14 +322,18 @@
 		FD5CA9941A9BBB6200AE72E1 /* ActivityBuilder WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				FD8B2BCF1A9E801A00C77A80 /* DetailActivityController.swift */,
 				FD7001D11A9CC131007CF710 /* ActivityBuilder WatchKit Extension.entitlements */,
 				FD5CA9981A9BBB6200AE72E1 /* InterfaceController.swift */,
 				FD5CA9B81A9BC61200AE72E1 /* ActivityRow.swift */,
 				FD5CA99A1A9BBB6200AE72E1 /* NotificationController.swift */,
 				FD5CA99C1A9BBB6200AE72E1 /* GlanceController.swift */,
+				FD24C18F1A9E896300DB38D3 /* StartController.swift */,
 				FD7001CF1A9BFD3B007CF710 /* ZoomActivityController.swift */,
 				FD5CA99E1A9BBB6200AE72E1 /* Images.xcassets */,
 				FD5CA9951A9BBB6200AE72E1 /* Supporting Files */,
+				FD7A9D5C1A9F585F003D5FFF /* ActiveStepController.swift */,
+				FD7A9D5E1A9F5A30003D5FFF /* ActiveStepConfig.swift */,
 			);
 			path = "ActivityBuilder WatchKit Extension";
 			sourceTree = "<group>";
@@ -666,9 +677,12 @@
 			files = (
 				FD5CA99B1A9BBB6200AE72E1 /* NotificationController.swift in Sources */,
 				FD5CA9B91A9BC61200AE72E1 /* ActivityRow.swift in Sources */,
+				FD7A9D5D1A9F585F003D5FFF /* ActiveStepController.swift in Sources */,
+				FD24C1901A9E896300DB38D3 /* StartController.swift in Sources */,
 				FD5CA9991A9BBB6200AE72E1 /* InterfaceController.swift in Sources */,
-				FD7001D01A9BFD3B007CF710 /* ZoomActivityController.swift in Sources */,
 				FD5CA99D1A9BBB6200AE72E1 /* GlanceController.swift in Sources */,
+				FD8B2BD01A9E801A00C77A80 /* DetailActivityController.swift in Sources */,
+				FD7A9D5F1A9F5A30003D5FFF /* ActiveStepConfig.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

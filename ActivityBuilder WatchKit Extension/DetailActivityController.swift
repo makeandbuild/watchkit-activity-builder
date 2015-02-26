@@ -1,5 +1,5 @@
 //
-//  ZoomActivityController.swift
+//  DetailActivityController.swift
 //  ActivityBuilder
 //
 //  Created by Lindsay Thurmond on 2/23/15.
@@ -7,27 +7,27 @@
 //
 
 import WatchKit
-import Foundation
+import WatchCoreDataProxy
 
 
-class ZoomActivityController: WKInterfaceController {
+class DetailActivityController: WKInterfaceController {
     
-    @IBOutlet weak var zoomActivityLabel: WKInterfaceLabel!
+    @IBOutlet weak var nameLabel: WKInterfaceLabel!
     
     @IBOutlet weak var detailLabel: WKInterfaceLabel!
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
-        var activity = context as! String
+        var step = context as! Step
         
-        var font = UIFont.systemFontOfSize(90)
-        var specialString = NSAttributedString(string: activity, attributes: [NSFontAttributeName:font])
-        self.zoomActivityLabel.setAttributedText(specialString)
+        var font = UIFont.systemFontOfSize(20)
+        var specialString = NSAttributedString(string: step.name, attributes: [NSFontAttributeName:font])
+        self.nameLabel.setAttributedText(specialString)
         
-        var detail = "No details"
-        if (activity == "") {
-        
+        var detail = step.detail
+        if (detail == "") {
+            detail = "No details"
         }
         self.detailLabel.setText(detail)
         

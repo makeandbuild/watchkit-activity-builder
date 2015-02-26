@@ -7,7 +7,6 @@
 //
 
 import WatchKit
-import Foundation
 import WatchCoreDataProxy
 
 
@@ -16,14 +15,14 @@ class InterfaceController: WKInterfaceController {
     @IBOutlet weak var table: WKInterfaceTable!
     
     // todo: as much as I love emojis  replace with actual step data
-    var activities:[Step] = []
+    var steps:[Step] = []
     //    var activities = ["🐶","🐷","🐼"]
-    var details = ["Dog", "Pig", "Panda"]
+//    var details = ["Dog", "Pig", "Panda"]
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
-        activities = StepManager.fetchSteps()
+        steps = StepManager.fetchSteps()
         
         // get list of activities from app - todo: do this with core data instead
 //        var userDefaults:NSUserDefaults = NSUserDefaults(suiteName: "group.com.makeandbuild.activitybuilder")!
@@ -34,11 +33,11 @@ class InterfaceController: WKInterfaceController {
 //        }
 
         
-        self.table.setNumberOfRows(self.activities.count, withRowType: "ActivityRow")
+        self.table.setNumberOfRows(self.steps.count, withRowType: "ActivityRow")
         
-        for index in 0..<self.activities.count {
+        for index in 0..<self.steps.count {
             var theRow = self.table.rowControllerAtIndex(index) as! ActivityRow
-            var stepData:Step = self.activities[index] as Step
+            var stepData:Step = self.steps[index] as Step
             theRow.activityRowLabel.setText(stepData.name)
         }
         
@@ -46,7 +45,7 @@ class InterfaceController: WKInterfaceController {
     }
     
     override func table(table: WKInterfaceTable, didSelectRowAtIndex rowIndex: Int) {
-        self.pushControllerWithName("zoomActivityController", context: self.activities[rowIndex])
+        self.pushControllerWithName("detailActivityController", context: self.steps[rowIndex])
     }
 
     override func willActivate() {
