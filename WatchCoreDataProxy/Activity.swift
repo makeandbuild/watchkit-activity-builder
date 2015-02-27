@@ -11,8 +11,9 @@ import CoreData
 
 public class Activity: NSManagedObject {
 
-    @NSManaged var name: String
-    @NSManaged var category: String
-    @NSManaged var detail: String
+    @NSManaged public var name: String
+    @NSManaged public var category: String
+    @NSManaged public var detail: String
+    @NSManaged public var steps:[Step]
 
 }

@@ -4,16 +4,17 @@
         <attribute name="category" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="detail" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="steps" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="Step" inverseName="activity" inverseEntity="Step" syncable="YES"/>
     </entity>
     <entity name="Step" representedClassName="WatchCoreDataProxy.Step" syncable="YES">
         <attribute name="detail" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="number" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="activity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Activity" syncable="YES"/>
+        <relationship name="activity" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Activity" inverseName="steps" inverseEntity="Activity" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Activity" positionX="-353" positionY="-168" width="128" height="94"/>
+        <element name="Activity" positionX="-353" positionY="-168" width="128" height="110"/>
         <element name="Step" positionX="-63" positionY="-27" width="128" height="126"/>
     </elements>
 </model>

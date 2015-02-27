@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		FD24C1901A9E896300DB38D3 /* StartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD24C18F1A9E896300DB38D3 /* StartController.swift */; };
-		FD2C81D81A9CECB700679983 /* StepManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2C81D71A9CECB700679983 /* StepManager.swift */; };
 		FD2C81E91A9CFD4700679983 /* WatchCoreDataProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = FD2C81E81A9CFD4700679983 /* WatchCoreDataProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FD2C81EF1A9CFD4700679983 /* WatchCoreDataProxy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD2C81E41A9CFD4700679983 /* WatchCoreDataProxy.framework */; };
 		FD2C81F81A9CFD4700679983 /* WatchCoreDataProxyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2C81F71A9CFD4700679983 /* WatchCoreDataProxyTests.swift */; };
@@ -19,13 +18,10 @@
 		FD2C820C1A9D4BB200679983 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2C820B1A9D4BB200679983 /* Activity.swift */; };
 		FD2C820E1A9D4FEE00679983 /* StepManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2C820D1A9D4FEE00679983 /* StepManager.swift */; };
 		FD5CA9691A9B8EA400AE72E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5CA9681A9B8EA400AE72E1 /* AppDelegate.swift */; };
-		FD5CA96E1A9B8EA400AE72E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5CA96D1A9B8EA400AE72E1 /* ViewController.swift */; };
 		FD5CA9711A9B8EA400AE72E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD5CA96F1A9B8EA400AE72E1 /* Main.storyboard */; };
 		FD5CA9731A9B8EA400AE72E1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD5CA9721A9B8EA400AE72E1 /* Images.xcassets */; };
 		FD5CA9761A9B8EA400AE72E1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD5CA9741A9B8EA400AE72E1 /* LaunchScreen.xib */; };
 		FD5CA9821A9B8EA400AE72E1 /* ActivityBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5CA9811A9B8EA400AE72E1 /* ActivityBuilderTests.swift */; };
-		FD5CA98C1A9B942E00AE72E1 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5CA98B1A9B942E00AE72E1 /* AddViewController.swift */; };
-		FD5CA98E1A9B947A00AE72E1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5CA98D1A9B947A00AE72E1 /* DetailViewController.swift */; };
 		FD5CA9991A9BBB6200AE72E1 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5CA9981A9BBB6200AE72E1 /* InterfaceController.swift */; };
 		FD5CA99B1A9BBB6200AE72E1 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5CA99A1A9BBB6200AE72E1 /* NotificationController.swift */; };
 		FD5CA99D1A9BBB6200AE72E1 /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5CA99C1A9BBB6200AE72E1 /* GlanceController.swift */; };
@@ -37,6 +33,10 @@
 		FD5CA9B91A9BC61200AE72E1 /* ActivityRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5CA9B81A9BC61200AE72E1 /* ActivityRow.swift */; };
 		FD7A9D5D1A9F585F003D5FFF /* ActiveStepController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7A9D5C1A9F585F003D5FFF /* ActiveStepController.swift */; };
 		FD7A9D5F1A9F5A30003D5FFF /* ActiveStepConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7A9D5E1A9F5A30003D5FFF /* ActiveStepConfig.swift */; };
+		FD7A9D631A9F8134003D5FFF /* ActivityTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7A9D621A9F8134003D5FFF /* ActivityTableController.swift */; };
+		FD7A9D651A9F8178003D5FFF /* ActivityDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7A9D641A9F8178003D5FFF /* ActivityDetailController.swift */; };
+		FD7A9D671A9F8432003D5FFF /* ActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7A9D661A9F8432003D5FFF /* ActivityManager.swift */; };
+		FD7FF5191AA0BCD8000E782D /* StepDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7FF5181AA0BCD8000E782D /* StepDetailController.swift */; };
 		FD8B2BD01A9E801A00C77A80 /* DetailActivityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8B2BCF1A9E801A00C77A80 /* DetailActivityController.swift */; };
 /* End PBXBuildFile section */
 
@@ -112,7 +112,6 @@
 
 /* Begin PBXFileReference section */
 		FD24C18F1A9E896300DB38D3 /* StartController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartController.swift; sourceTree = "<group>"; };
-		FD2C81D71A9CECB700679983 /* StepManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepManager.swift; sourceTree = "<group>"; };
 		FD2C81E41A9CFD4700679983 /* WatchCoreDataProxy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WatchCoreDataProxy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD2C81E71A9CFD4700679983 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD2C81E81A9CFD4700679983 /* WatchCoreDataProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WatchCoreDataProxy.h; sourceTree = "<group>"; };
@@ -127,15 +126,12 @@
 		FD5CA9631A9B8EA400AE72E1 /* ActivityBuilder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ActivityBuilder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD5CA9671A9B8EA400AE72E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD5CA9681A9B8EA400AE72E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FD5CA96D1A9B8EA400AE72E1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FD5CA9701A9B8EA400AE72E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FD5CA9721A9B8EA400AE72E1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FD5CA9751A9B8EA400AE72E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		FD5CA97B1A9B8EA400AE72E1 /* ActivityBuilderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ActivityBuilderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD5CA9801A9B8EA400AE72E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD5CA9811A9B8EA400AE72E1 /* ActivityBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityBuilderTests.swift; sourceTree = "<group>"; };
-		FD5CA98B1A9B942E00AE72E1 /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
-		FD5CA98D1A9B947A00AE72E1 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		FD5CA9931A9BBB6200AE72E1 /* ActivityBuilder WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "ActivityBuilder WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD5CA9961A9BBB6200AE72E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD5CA9971A9BBB6200AE72E1 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
@@ -148,18 +144,14 @@
 		FD5CA9AA1A9BBB6200AE72E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		FD5CA9AC1A9BBB6200AE72E1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FD5CA9B81A9BC61200AE72E1 /* ActivityRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityRow.swift; sourceTree = "<group>"; };
-		FD7001CF1A9BFD3B007CF710 /* ZoomActivityController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoomActivityController.swift; sourceTree = "<group>"; };
 		FD7001D11A9CC131007CF710 /* ActivityBuilder WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "ActivityBuilder WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		FD7001D21A9CC977007CF710 /* ActivityBuilder.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ActivityBuilder.entitlements; sourceTree = "<group>"; };
-		FD73291C1A9E24CF007EE8E8 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
-		FD73291D1A9E24CF007EE8E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FD73291F1A9E24CF007EE8E8 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		FD7329201A9E24CF007EE8E8 /* Step.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
-		FD7329211A9E24CF007EE8E8 /* StepManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepManager.swift; sourceTree = "<group>"; };
-		FD7329221A9E24CF007EE8E8 /* WatchCoreDataProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WatchCoreDataProxy.h; sourceTree = "<group>"; };
-		FD7329231A9E24CF007EE8E8 /* WatchCoreDataProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchCoreDataProxy.swift; sourceTree = "<group>"; };
 		FD7A9D5C1A9F585F003D5FFF /* ActiveStepController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveStepController.swift; sourceTree = "<group>"; };
 		FD7A9D5E1A9F5A30003D5FFF /* ActiveStepConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveStepConfig.swift; sourceTree = "<group>"; };
+		FD7A9D621A9F8134003D5FFF /* ActivityTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityTableController.swift; sourceTree = "<group>"; };
+		FD7A9D641A9F8178003D5FFF /* ActivityDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityDetailController.swift; sourceTree = "<group>"; };
+		FD7A9D661A9F8432003D5FFF /* ActivityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityManager.swift; sourceTree = "<group>"; };
+		FD7FF5181AA0BCD8000E782D /* StepDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepDetailController.swift; sourceTree = "<group>"; };
 		FD8B2BCF1A9E801A00C77A80 /* DetailActivityController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailActivityController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -207,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				FD2C820F1A9D500200679983 /* model */,
+				FD7A9D661A9F8432003D5FFF /* ActivityManager.swift */,
 				FD2C820D1A9D4FEE00679983 /* StepManager.swift */,
 				FD2C81E81A9CFD4700679983 /* WatchCoreDataProxy.h */,
 				FD2C82071A9D02B800679983 /* WatchCoreDataProxy.swift */,
@@ -253,7 +246,6 @@
 		FD5CA95A1A9B8EA400AE72E1 = {
 			isa = PBXGroup;
 			children = (
-				FD73291B1A9E24CF007EE8E8 /* WatchCoreDataProxy */,
 				FD5CA9651A9B8EA400AE72E1 /* ActivityBuilder */,
 				FD5CA97E1A9B8EA400AE72E1 /* ActivityBuilderTests */,
 				FD5CA9941A9BBB6200AE72E1 /* ActivityBuilder WatchKit Extension */,
@@ -282,14 +274,13 @@
 			children = (
 				FD7001D21A9CC977007CF710 /* ActivityBuilder.entitlements */,
 				FD5CA9681A9B8EA400AE72E1 /* AppDelegate.swift */,
-				FD5CA96D1A9B8EA400AE72E1 /* ViewController.swift */,
-				FD5CA98B1A9B942E00AE72E1 /* AddViewController.swift */,
-				FD5CA98D1A9B947A00AE72E1 /* DetailViewController.swift */,
+				FD7A9D621A9F8134003D5FFF /* ActivityTableController.swift */,
+				FD7A9D641A9F8178003D5FFF /* ActivityDetailController.swift */,
 				FD5CA96F1A9B8EA400AE72E1 /* Main.storyboard */,
 				FD5CA9721A9B8EA400AE72E1 /* Images.xcassets */,
 				FD5CA9741A9B8EA400AE72E1 /* LaunchScreen.xib */,
 				FD5CA9661A9B8EA400AE72E1 /* Supporting Files */,
-				FD2C81D71A9CECB700679983 /* StepManager.swift */,
+				FD7FF5181AA0BCD8000E782D /* StepDetailController.swift */,
 			);
 			path = ActivityBuilder;
 			sourceTree = "<group>";
@@ -329,7 +320,6 @@
 				FD5CA99A1A9BBB6200AE72E1 /* NotificationController.swift */,
 				FD5CA99C1A9BBB6200AE72E1 /* GlanceController.swift */,
 				FD24C18F1A9E896300DB38D3 /* StartController.swift */,
-				FD7001CF1A9BFD3B007CF710 /* ZoomActivityController.swift */,
 				FD5CA99E1A9BBB6200AE72E1 /* Images.xcassets */,
 				FD5CA9951A9BBB6200AE72E1 /* Supporting Files */,
 				FD7A9D5C1A9F585F003D5FFF /* ActiveStepController.swift */,
@@ -363,28 +353,6 @@
 				FD5CA9A81A9BBB6200AE72E1 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		FD73291B1A9E24CF007EE8E8 /* WatchCoreDataProxy */ = {
-			isa = PBXGroup;
-			children = (
-				FD8B2BCE1A9E780100C77A80 /* model */,
-				FD73291D1A9E24CF007EE8E8 /* Info.plist */,
-				FD73291E1A9E24CF007EE8E8 /* Model.xcdatamodeld */,
-				FD7329211A9E24CF007EE8E8 /* StepManager.swift */,
-				FD7329221A9E24CF007EE8E8 /* WatchCoreDataProxy.h */,
-				FD7329231A9E24CF007EE8E8 /* WatchCoreDataProxy.swift */,
-			);
-			path = WatchCoreDataProxy;
-			sourceTree = "<group>";
-		};
-		FD8B2BCE1A9E780100C77A80 /* model */ = {
-			isa = PBXGroup;
-			children = (
-				FD73291C1A9E24CF007EE8E8 /* Activity.swift */,
-				FD7329201A9E24CF007EE8E8 /* Step.swift */,
-			);
-			name = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -637,6 +605,7 @@
 			files = (
 				FD2C82061A9CFD8F00679983 /* Model.xcdatamodeld in Sources */,
 				FD2C82081A9D02B800679983 /* WatchCoreDataProxy.swift in Sources */,
+				FD7A9D671A9F8432003D5FFF /* ActivityManager.swift in Sources */,
 				FD2C820C1A9D4BB200679983 /* Activity.swift in Sources */,
 				FD2C820A1A9D4BB100679983 /* Step.swift in Sources */,
 				FD2C820E1A9D4FEE00679983 /* StepManager.swift in Sources */,
@@ -655,11 +624,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD5CA96E1A9B8EA400AE72E1 /* ViewController.swift in Sources */,
-				FD5CA98E1A9B947A00AE72E1 /* DetailViewController.swift in Sources */,
-				FD2C81D81A9CECB700679983 /* StepManager.swift in Sources */,
-				FD5CA98C1A9B942E00AE72E1 /* AddViewController.swift in Sources */,
+				FD7FF5191AA0BCD8000E782D /* StepDetailController.swift in Sources */,
 				FD5CA9691A9B8EA400AE72E1 /* AppDelegate.swift in Sources */,
+				FD7A9D651A9F8178003D5FFF /* ActivityDetailController.swift in Sources */,
+				FD7A9D631A9F8134003D5FFF /* ActivityTableController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1116,16 +1084,6 @@
 				FD2C82051A9CFD8F00679983 /* Model.xcdatamodel */,
 			);
 			currentVersion = FD2C82051A9CFD8F00679983 /* Model.xcdatamodel */;
-			path = Model.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-		FD73291E1A9E24CF007EE8E8 /* Model.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				FD73291F1A9E24CF007EE8E8 /* Model.xcdatamodel */,
-			);
-			currentVersion = FD73291F1A9E24CF007EE8E8 /* Model.xcdatamodel */;
 			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

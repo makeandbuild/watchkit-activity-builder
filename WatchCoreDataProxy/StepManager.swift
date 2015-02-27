@@ -66,7 +66,7 @@ public class StepManager: NSObject {
         saveManagedContext()
     }
     
-    class func saveManagedContext() {
+    public class func saveManagedContext() {
         var error : NSError? = nil
         if !getContext().save(&error) {
             NSLog("Unresolved error saving context \(error), \(error!.userInfo)")

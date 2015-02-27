@@ -14,7 +14,7 @@ public class Step: NSManagedObject {
     @NSManaged public var name: String
     @NSManaged public var detail: String
     @NSManaged public var status: String
-    @NSManaged public var activity: NSManagedObject
+    @NSManaged public var activity: Activity
     @NSManaged public var number: Int16
 
 }

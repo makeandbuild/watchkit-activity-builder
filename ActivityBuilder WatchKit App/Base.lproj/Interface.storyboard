@@ -38,11 +38,13 @@
                 <controller identifier="activeStepController" id="J6d-zd-WsO" customClass="ActiveStepController" customModule="ActivityBuilder_WatchKit_Extension">
                     <items>
                         <button width="1" alignment="left" title="Step Name" id="JTu-Kq-nwe">
+                            <color key="backgroundColor" red="0.44793752599999997" green="0.64997632579999998" blue="0.38403294360000001" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="showStepDetail" destination="J6d-zd-WsO" id="6g5-eO-kQM"/>
                             </connections>
                         </button>
                         <button width="1" alignment="left" title="Next" id="xKL-8Z-bpM">
+                            <color key="backgroundColor" red="0.64997632575757569" green="0.46380436244555107" blue="0.57527161619349099" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="goToNextStep" destination="J6d-zd-WsO" id="9AJ-no-rci"/>
                             </connections>
@@ -79,6 +81,7 @@
                 <controller identifier="startController" id="EB3-A7-WO7" customClass="StartController" customModule="ActivityBuilder_WatchKit_Extension">
                     <items>
                         <button width="1" alignment="left" title="Activity Name" id="Bv7-ft-oUV">
+                            <color key="backgroundColor" red="0.18655293400436537" green="0.55298582783261163" blue="0.64997632575757569" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="viewActivityDetails" destination="EB3-A7-WO7" id="5KH-a4-s5v"/>
                             </connections>
