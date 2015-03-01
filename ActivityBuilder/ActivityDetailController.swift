@@ -35,7 +35,9 @@ class ActivityDetailController: UIViewController, UITableViewDataSource, UITable
 //        steps = StepManager.fetchAllSteps()
         
         if activity?.steps != nil {
-             steps = activity!.steps.allObjects as! [Step]
+//             steps = activity!.steps.allObjects as! [Step]
+            steps = activity!.steps.sortedArrayUsingDescriptors([NSSortDescriptor(key: "number", ascending: true)])
+            
         } else {
             steps = []
         }

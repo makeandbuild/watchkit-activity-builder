@@ -31,8 +31,13 @@ class StepDetailController: UIViewController {
         println("done button tapped")
         
         if step == nil {
+            var stepNum:Int16 = 0
+            if activity?.steps != nil {
+                stepNum = Int16(activity!.steps.count)
+            }
+            println("created new step with number: \(stepNum)")
             // create new step
-            step = StepManager.createStep(nameField.text, detail: detailsTextView.text, number: 1, status: "", activity:activity!)
+            step = StepManager.createStep(nameField.text, detail: detailsTextView.text, number: stepNum, status: "", activity:activity!)
         } else {
             // update existing step
             step?.name = nameField.text

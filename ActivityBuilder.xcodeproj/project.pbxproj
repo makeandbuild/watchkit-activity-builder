@@ -276,11 +276,11 @@
 				FD5CA9681A9B8EA400AE72E1 /* AppDelegate.swift */,
 				FD7A9D621A9F8134003D5FFF /* ActivityTableController.swift */,
 				FD7A9D641A9F8178003D5FFF /* ActivityDetailController.swift */,
+				FD7FF5181AA0BCD8000E782D /* StepDetailController.swift */,
 				FD5CA96F1A9B8EA400AE72E1 /* Main.storyboard */,
 				FD5CA9721A9B8EA400AE72E1 /* Images.xcassets */,
 				FD5CA9741A9B8EA400AE72E1 /* LaunchScreen.xib */,
 				FD5CA9661A9B8EA400AE72E1 /* Supporting Files */,
-				FD7FF5181AA0BCD8000E782D /* StepDetailController.swift */,
 			);
 			path = ActivityBuilder;
 			sourceTree = "<group>";
@@ -314,16 +314,16 @@
 			isa = PBXGroup;
 			children = (
 				FD8B2BCF1A9E801A00C77A80 /* DetailActivityController.swift */,
-				FD7001D11A9CC131007CF710 /* ActivityBuilder WatchKit Extension.entitlements */,
 				FD5CA9981A9BBB6200AE72E1 /* InterfaceController.swift */,
 				FD5CA9B81A9BC61200AE72E1 /* ActivityRow.swift */,
 				FD5CA99A1A9BBB6200AE72E1 /* NotificationController.swift */,
 				FD5CA99C1A9BBB6200AE72E1 /* GlanceController.swift */,
 				FD24C18F1A9E896300DB38D3 /* StartController.swift */,
-				FD5CA99E1A9BBB6200AE72E1 /* Images.xcassets */,
-				FD5CA9951A9BBB6200AE72E1 /* Supporting Files */,
 				FD7A9D5C1A9F585F003D5FFF /* ActiveStepController.swift */,
 				FD7A9D5E1A9F5A30003D5FFF /* ActiveStepConfig.swift */,
+				FD7001D11A9CC131007CF710 /* ActivityBuilder WatchKit Extension.entitlements */,
+				FD5CA99E1A9BBB6200AE72E1 /* Images.xcassets */,
+				FD5CA9951A9BBB6200AE72E1 /* Supporting Files */,
 			);
 			path = "ActivityBuilder WatchKit Extension";
 			sourceTree = "<group>";
