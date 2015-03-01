@@ -19,7 +19,7 @@ public class ActivityManager: NSObject {
         return WatchCoreDataProxy.sharedInstance.managedObjectContext!
     }
     
-    public class func createActivity(name: String, category: String, details: String, steps:[Step]?) -> Activity {
+    public class func createActivity(name: String, category: String, details: String, steps:NSSet?) -> Activity {
     
         let newActivity: Activity = NSEntityDescription.insertNewObjectForEntityForName(entityName, inManagedObjectContext: getContext()) as! Activity
         

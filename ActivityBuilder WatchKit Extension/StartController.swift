@@ -18,7 +18,7 @@ class StartController: WKInterfaceController {
     @IBAction func startActivity() {
         // navigates to screen displaying the first step
         
-        var steps = StepManager.fetchSteps()
+        var steps = StepManager.fetchAllSteps()
         self.pushControllerWithName("activeStepController", context: ActiveStepConfig(index: 0, steps: steps))
     
     }

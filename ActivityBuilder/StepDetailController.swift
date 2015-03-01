@@ -11,6 +11,7 @@ import WatchCoreDataProxy
 
 class StepDetailController: UIViewController {
     
+    var activity:Activity?
     var step:Step?
     
     @IBOutlet weak var nameField: UITextField!
@@ -31,7 +32,7 @@ class StepDetailController: UIViewController {
         
         if step == nil {
             // create new step
-            step = StepManager.createStep(nameField.text, detail: detailsTextView.text, number: 1, status: "")
+            step = StepManager.createStep(nameField.text, detail: detailsTextView.text, number: 1, status: "", activity:activity!)
         } else {
             // update existing step
             step?.name = nameField.text

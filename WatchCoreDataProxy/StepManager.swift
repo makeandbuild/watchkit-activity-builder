@@ -22,7 +22,7 @@ public class StepManager: NSObject {
         return WatchCoreDataProxy.sharedInstance.managedObjectContext!
     }
     
-    public class func createStep(name: String, detail: String, number: Int16, status: String) -> Step {
+    public class func createStep(name: String, detail: String, number: Int16, status: String, activity:Activity) -> Step {
         
         let newStep: Step = NSEntityDescription.insertNewObjectForEntityForName("Step", inManagedObjectContext: getContext()) as! Step
         
@@ -30,13 +30,14 @@ public class StepManager: NSObject {
         newStep.detail = detail
         newStep.number = number
         newStep.status = status
+        newStep.activity = activity
         
         saveManagedContext()
         
         return newStep
     }
     
-    public class func fetchSteps() -> [Step] {
+    public class func fetchAllSteps() -> [Step] {
         let fetchRequest = NSFetchRequest(entityName: "Step")
         
         // Create a sort descriptor object that sorts on the "name"
@@ -49,10 +50,6 @@ public class StepManager: NSObject {
         
         var error: NSError? = nil
         
-//        var steps:[Step]? = getContext().executeFetchRequest(fetchRequest, error: &error) as? [Step]
-//        return steps
-
-        
         if let steps:[Step] = getContext().executeFetchRequest(fetchRequest, error: &error) as? [Step] {
             return steps
         }
@@ -60,6 +57,11 @@ public class StepManager: NSObject {
             return []
         }
     }
+    
+//    public class func fetchSteps(activity:Activity) {
+//        let fetchRequest = NSFetchRequest(entityName: "Step")
+//        
+//    }
     
     public class func deleteStep(step:Step) {
         getContext().deleteObject(step)

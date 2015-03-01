@@ -22,7 +22,7 @@ class InterfaceController: WKInterfaceController {
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
-        steps = StepManager.fetchSteps()
+        steps = StepManager.fetchAllSteps()
         
         // get list of activities from app - todo: do this with core data instead
 //        var userDefaults:NSUserDefaults = NSUserDefaults(suiteName: "group.com.makeandbuild.activitybuilder")!

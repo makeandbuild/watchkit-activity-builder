@@ -26,12 +26,22 @@ class ActivityDetailController: UIViewController, UITableViewDataSource, UITable
     
     
     override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
         
         self.title = activity == nil ? "Add Activity" : "Edit Activity"
         
         nameField.text = activity?.name ?? ""
+
+//        steps = StepManager.fetchAllSteps()
         
-        steps = StepManager.fetchSteps()
+        if activity?.steps != nil {
+             steps = activity!.steps.allObjects as! [Step]
+        } else {
+            steps = []
+        }
+        
+//        println("num steps: \(steps.count)")
+//        println("act: \(activity?.name)")
         
         self.table.reloadData()
     }
@@ -58,7 +68,7 @@ class ActivityDetailController: UIViewController, UITableViewDataSource, UITable
     
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return steps.count
+        return 1
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -81,11 +91,14 @@ class ActivityDetailController: UIViewController, UITableViewDataSource, UITable
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
+        var stepDetailController:StepDetailController = segue.destinationViewController as! StepDetailController
+        
         if (segue.identifier == "addStep") {
-            // nothing to do here - StepDetailController can handle a nil step
+            stepDetailController.activity = activity
+            
         } else if (segue.identifier == "stepDetail") {
             var selectedIndexPath:NSIndexPath = self.table.indexPathForSelectedRow()!
-            var stepDetailController:StepDetailController = segue.destinationViewController as! StepDetailController
+            
             stepDetailController.step = steps[selectedIndexPath.row] as? Step
         }
     }
