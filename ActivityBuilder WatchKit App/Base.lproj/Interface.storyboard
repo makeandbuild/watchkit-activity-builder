@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7519.1" systemVersion="14C109" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="EB3-A7-WO7">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7519.1" systemVersion="14C109" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="X0M-Ve-CBC">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7513.1"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
@@ -12,14 +12,14 @@
                     <items>
                         <table alignment="left" id="xXy-cc-qp9">
                             <items>
-                                <tableRow identifier="ActivityRow" id="MZl-As-gdj" customClass="ActivityRow" customModule="ActivityBuilder_WatchKit_Extension">
+                                <tableRow identifier="StepRow" id="MZl-As-gdj" customClass="StepRow" customModule="ActivityBuilder_WatchKit_Extension">
                                     <group key="rootItem" width="1" alignment="left" id="LXq-0o-PnK">
                                         <items>
                                             <label alignment="left" text="Step Name" id="ko9-rX-lJs"/>
                                         </items>
                                     </group>
                                     <connections>
-                                        <outlet property="activityRowLabel" destination="ko9-rX-lJs" id="fWf-Na-E88"/>
+                                        <outlet property="nameLabel" destination="ko9-rX-lJs" id="8Ca-G2-Buv"/>
                                     </connections>
                                 </tableRow>
                             </items>
@@ -30,7 +30,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="396" y="172"/>
+            <point key="canvasLocation" x="646" y="175"/>
         </scene>
         <!--activeStepController-->
         <scene sceneID="Agt-37-zJz">
@@ -56,7 +56,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="396" y="413"/>
+            <point key="canvasLocation" x="646" y="400"/>
         </scene>
         <!--detailActivityController-->
         <scene sceneID="j4b-TA-rcl">
@@ -73,7 +73,34 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="553" y="342"/>
+            <point key="canvasLocation" x="810" y="270"/>
+        </scene>
+        <!--activityListController-->
+        <scene sceneID="ZXd-HL-wff">
+            <objects>
+                <controller identifier="activityListController" id="X0M-Ve-CBC" customClass="ActivityListController" customModule="ActivityBuilder_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="2gd-51-52r">
+                            <items>
+                                <tableRow identifier="ActivityRow" id="vFS-Zi-Dc0" customClass="ActivityRow" customModule="ActivityBuilder_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="bUD-Ez-sm9">
+                                        <items>
+                                            <label alignment="left" text="Activity Name" id="6TR-Bp-VM8"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="nameLabel" destination="6TR-Bp-VM8" id="dho-Wg-1uR"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="table" destination="2gd-51-52r" id="K8K-G3-3DA"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="288" y="270"/>
         </scene>
         <!--startController-->
         <scene sceneID="Js4-eE-NTf">
@@ -99,7 +126,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="208" y="309"/>
+            <point key="canvasLocation" x="467" y="270"/>
         </scene>
         <!--Glance Interface Controller-->
         <scene sceneID="BOz-TT-tkC">

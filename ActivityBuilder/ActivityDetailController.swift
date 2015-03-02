@@ -31,19 +31,14 @@ class ActivityDetailController: UIViewController, UITableViewDataSource, UITable
         self.title = activity == nil ? "Add Activity" : "Edit Activity"
         
         nameField.text = activity?.name ?? ""
-
-//        steps = StepManager.fetchAllSteps()
         
         if activity?.steps != nil {
 //             steps = activity!.steps.allObjects as! [Step]
-            steps = activity!.steps.sortedArrayUsingDescriptors([NSSortDescriptor(key: "number", ascending: true)])
+            steps = activity!.stepsSortedByNumber()
             
         } else {
             steps = []
         }
-        
-//        println("num steps: \(steps.count)")
-//        println("act: \(activity?.name)")
         
         self.table.reloadData()
     }

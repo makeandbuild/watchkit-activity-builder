@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD1E92631AA3BB6700F2F2F9 /* ActivityListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1E92611AA3BB6700F2F2F9 /* ActivityListController.swift */; };
+		FD1E92641AA3BB6700F2F2F9 /* StepListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1E92621AA3BB6700F2F2F9 /* StepListController.swift */; };
+		FD1E92661AA3BDA000F2F2F9 /* StepRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1E92651AA3BDA000F2F2F9 /* StepRow.swift */; };
+		FD1E92681AA3D37000F2F2F9 /* ActivityRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1E92671AA3D37000F2F2F9 /* ActivityRow.swift */; };
 		FD24C1901A9E896300DB38D3 /* StartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD24C18F1A9E896300DB38D3 /* StartController.swift */; };
 		FD2C81E91A9CFD4700679983 /* WatchCoreDataProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = FD2C81E81A9CFD4700679983 /* WatchCoreDataProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FD2C81EF1A9CFD4700679983 /* WatchCoreDataProxy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD2C81E41A9CFD4700679983 /* WatchCoreDataProxy.framework */; };
@@ -22,7 +26,6 @@
 		FD5CA9731A9B8EA400AE72E1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD5CA9721A9B8EA400AE72E1 /* Images.xcassets */; };
 		FD5CA9761A9B8EA400AE72E1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD5CA9741A9B8EA400AE72E1 /* LaunchScreen.xib */; };
 		FD5CA9821A9B8EA400AE72E1 /* ActivityBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5CA9811A9B8EA400AE72E1 /* ActivityBuilderTests.swift */; };
-		FD5CA9991A9BBB6200AE72E1 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5CA9981A9BBB6200AE72E1 /* InterfaceController.swift */; };
 		FD5CA99B1A9BBB6200AE72E1 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5CA99A1A9BBB6200AE72E1 /* NotificationController.swift */; };
 		FD5CA99D1A9BBB6200AE72E1 /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5CA99C1A9BBB6200AE72E1 /* GlanceController.swift */; };
 		FD5CA99F1A9BBB6200AE72E1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD5CA99E1A9BBB6200AE72E1 /* Images.xcassets */; };
@@ -30,7 +33,6 @@
 		FD5CA9AB1A9BBB6200AE72E1 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD5CA9A91A9BBB6200AE72E1 /* Interface.storyboard */; };
 		FD5CA9AD1A9BBB6200AE72E1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD5CA9AC1A9BBB6200AE72E1 /* Images.xcassets */; };
 		FD5CA9B01A9BBB6200AE72E1 /* ActivityBuilder WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FD5CA9931A9BBB6200AE72E1 /* ActivityBuilder WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		FD5CA9B91A9BC61200AE72E1 /* ActivityRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5CA9B81A9BC61200AE72E1 /* ActivityRow.swift */; };
 		FD7A9D5D1A9F585F003D5FFF /* ActiveStepController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7A9D5C1A9F585F003D5FFF /* ActiveStepController.swift */; };
 		FD7A9D5F1A9F5A30003D5FFF /* ActiveStepConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7A9D5E1A9F5A30003D5FFF /* ActiveStepConfig.swift */; };
 		FD7A9D631A9F8134003D5FFF /* ActivityTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7A9D621A9F8134003D5FFF /* ActivityTableController.swift */; };
@@ -111,6 +113,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		FD1E92611AA3BB6700F2F2F9 /* ActivityListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityListController.swift; sourceTree = "<group>"; };
+		FD1E92621AA3BB6700F2F2F9 /* StepListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepListController.swift; sourceTree = "<group>"; };
+		FD1E92651AA3BDA000F2F2F9 /* StepRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepRow.swift; sourceTree = "<group>"; };
+		FD1E92671AA3D37000F2F2F9 /* ActivityRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityRow.swift; sourceTree = "<group>"; };
 		FD24C18F1A9E896300DB38D3 /* StartController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartController.swift; sourceTree = "<group>"; };
 		FD2C81E41A9CFD4700679983 /* WatchCoreDataProxy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WatchCoreDataProxy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD2C81E71A9CFD4700679983 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -135,7 +141,6 @@
 		FD5CA9931A9BBB6200AE72E1 /* ActivityBuilder WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "ActivityBuilder WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD5CA9961A9BBB6200AE72E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD5CA9971A9BBB6200AE72E1 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
-		FD5CA9981A9BBB6200AE72E1 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
 		FD5CA99A1A9BBB6200AE72E1 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		FD5CA99C1A9BBB6200AE72E1 /* GlanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlanceController.swift; sourceTree = "<group>"; };
 		FD5CA99E1A9BBB6200AE72E1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -143,7 +148,6 @@
 		FD5CA9A81A9BBB6200AE72E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD5CA9AA1A9BBB6200AE72E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		FD5CA9AC1A9BBB6200AE72E1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		FD5CA9B81A9BC61200AE72E1 /* ActivityRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityRow.swift; sourceTree = "<group>"; };
 		FD7001D11A9CC131007CF710 /* ActivityBuilder WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "ActivityBuilder WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		FD7001D21A9CC977007CF710 /* ActivityBuilder.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ActivityBuilder.entitlements; sourceTree = "<group>"; };
 		FD7A9D5C1A9F585F003D5FFF /* ActiveStepController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveStepController.swift; sourceTree = "<group>"; };
@@ -313,9 +317,11 @@
 		FD5CA9941A9BBB6200AE72E1 /* ActivityBuilder WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				FD1E92671AA3D37000F2F2F9 /* ActivityRow.swift */,
+				FD1E92651AA3BDA000F2F2F9 /* StepRow.swift */,
+				FD1E92611AA3BB6700F2F2F9 /* ActivityListController.swift */,
+				FD1E92621AA3BB6700F2F2F9 /* StepListController.swift */,
 				FD8B2BCF1A9E801A00C77A80 /* DetailActivityController.swift */,
-				FD5CA9981A9BBB6200AE72E1 /* InterfaceController.swift */,
-				FD5CA9B81A9BC61200AE72E1 /* ActivityRow.swift */,
 				FD5CA99A1A9BBB6200AE72E1 /* NotificationController.swift */,
 				FD5CA99C1A9BBB6200AE72E1 /* GlanceController.swift */,
 				FD24C18F1A9E896300DB38D3 /* StartController.swift */,
@@ -644,10 +650,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD5CA99B1A9BBB6200AE72E1 /* NotificationController.swift in Sources */,
-				FD5CA9B91A9BC61200AE72E1 /* ActivityRow.swift in Sources */,
+				FD1E92641AA3BB6700F2F2F9 /* StepListController.swift in Sources */,
 				FD7A9D5D1A9F585F003D5FFF /* ActiveStepController.swift in Sources */,
 				FD24C1901A9E896300DB38D3 /* StartController.swift in Sources */,
-				FD5CA9991A9BBB6200AE72E1 /* InterfaceController.swift in Sources */,
+				FD1E92631AA3BB6700F2F2F9 /* ActivityListController.swift in Sources */,
+				FD1E92681AA3D37000F2F2F9 /* ActivityRow.swift in Sources */,
+				FD1E92661AA3BDA000F2F2F9 /* StepRow.swift in Sources */,
 				FD5CA99D1A9BBB6200AE72E1 /* GlanceController.swift in Sources */,
 				FD8B2BD01A9E801A00C77A80 /* DetailActivityController.swift in Sources */,
 				FD7A9D5F1A9F5A30003D5FFF /* ActiveStepConfig.swift in Sources */,
