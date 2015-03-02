@@ -50,7 +50,7 @@ public class StepManager: NSObject {
             return steps
         }
         else {
-            return []
+            return [Step]()
         }
     }
     

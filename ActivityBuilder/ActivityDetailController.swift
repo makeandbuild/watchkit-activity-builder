@@ -18,9 +18,11 @@ class ActivityDetailController: UIViewController, UITableViewDataSource, UITable
     
     var activity:Activity?
     
-    var steps = [Step]()
+    var steps:[Step] = [Step]()
     
     @IBOutlet weak var nameField: UITextField!
+    
+    @IBOutlet weak var addStepButton: UIButton!
     
     @IBOutlet weak var table: UITableView!
     
@@ -32,12 +34,15 @@ class ActivityDetailController: UIViewController, UITableViewDataSource, UITable
         
         nameField.text = activity?.name ?? ""
         
+        enableAddStepIfNecessary()
+
+        
         if activity?.steps != nil {
 //             steps = activity!.steps.allObjects as! [Step]
             steps = activity!.stepsSortedByNumber()
             
         } else {
-            steps = []
+            steps = [Step]()
         }
         
         self.table.reloadData()
@@ -47,6 +52,13 @@ class ActivityDetailController: UIViewController, UITableViewDataSource, UITable
         
         println("Done button tapped")
         
+        saveActivity()
+        
+        self.navigationController?.popToRootViewControllerAnimated(true)
+        
+    }
+    
+    func saveActivity() {
         if activity == nil {
             // create a new activity
             activity = ActivityManager.createActivity(nameField.text, category: "", details: "", steps: nil)
@@ -55,9 +67,23 @@ class ActivityDetailController: UIViewController, UITableViewDataSource, UITable
             activity?.name = nameField.text
             DataManager.saveManagedContext()
         }
+    }
+    
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+//        view.endEditing(true)
         
-        self.navigationController?.popToRootViewControllerAnimated(true)
+        // auto-save activity
+        if (!nameField.text.isEmpty) {
+            saveActivity()
+        }
+        enableAddStepIfNecessary()
         
+        super.touchesBegan(touches, withEvent: event)
+    }
+    
+    func enableAddStepIfNecessary() {
+        var addStepsEnabled = !nameField.text.isEmpty
+        addStepButton.enabled = addStepsEnabled
     }
     
     
@@ -100,6 +126,9 @@ class ActivityDetailController: UIViewController, UITableViewDataSource, UITable
         var stepDetailController:StepDetailController = segue.destinationViewController as! StepDetailController
         
         if (segue.identifier == "addStep") {
+            if (activity == nil) {
+                saveActivity()
+            }
             stepDetailController.activity = activity
             
         } else if (segue.identifier == "stepDetail") {
@@ -109,4 +138,12 @@ class ActivityDetailController: UIViewController, UITableViewDataSource, UITable
         }
     }
 
+    func showValidationError() {
+        let alertController = UIAlertController(title: "Validation Error", message:
+            "Activity Name is Required", preferredStyle: UIAlertControllerStyle.Alert)
+        alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+        
+        self.presentViewController(alertController, animated: true, completion: nil)
+    }
+    
 }

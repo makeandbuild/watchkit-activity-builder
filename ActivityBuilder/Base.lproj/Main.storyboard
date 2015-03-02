@@ -85,6 +85,7 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="addStepButton" destination="XQy-U6-hqb" id="3hN-iw-frV"/>
                         <outlet property="nameField" destination="72h-V1-L3Q" id="uQy-hs-Mhl"/>
                         <outlet property="table" destination="01q-uU-kLt" id="Ugl-bx-EEY"/>
                     </connections>

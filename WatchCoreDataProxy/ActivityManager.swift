@@ -50,7 +50,7 @@ public class ActivityManager: NSObject {
             return activities
         }
         else {
-            return []
+            return [Activity]()
         }
     }
     
