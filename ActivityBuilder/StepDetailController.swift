@@ -42,7 +42,7 @@ class StepDetailController: UIViewController {
             // update existing step
             step?.name = nameField.text
             step?.detail = detailsTextView.text
-            StepManager.saveManagedContext()
+            DataManager.saveManagedContext()
         }
         
         popToActivitiesView()

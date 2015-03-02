@@ -15,13 +15,11 @@ public class ActivityManager: NSObject {
     //This approach supports lazy initialization because Swift lazily initializes class constants (and variables), and is thread safe by the definition of let.
     static let sharedInstance = ActivityManager()
     
-    class func getContext()->NSManagedObjectContext {
-        return WatchCoreDataProxy.sharedInstance.managedObjectContext!
-    }
+    
     
     public class func createActivity(name: String, category: String, details: String, steps:NSSet?) -> Activity {
     
-        let newActivity: Activity = NSEntityDescription.insertNewObjectForEntityForName(entityName, inManagedObjectContext: getContext()) as! Activity
+        let newActivity: Activity = NSEntityDescription.insertNewObjectForEntityForName(entityName, inManagedObjectContext: DataManager.getContext()) as! Activity
         
         newActivity.name = name
         newActivity.category = category
@@ -30,7 +28,7 @@ public class ActivityManager: NSObject {
             newActivity.steps = steps!
         }
         
-        saveManagedContext()
+        DataManager.saveManagedContext()
         
         return newActivity
     }
@@ -48,7 +46,7 @@ public class ActivityManager: NSObject {
         
         var error: NSError? = nil
         
-        if let activities:[Activity] = getContext().executeFetchRequest(fetchRequest, error: &error) as? [Activity] {
+        if let activities:[Activity] = DataManager.getContext().executeFetchRequest(fetchRequest, error: &error) as? [Activity] {
             return activities
         }
         else {
@@ -57,17 +55,7 @@ public class ActivityManager: NSObject {
     }
     
     public class func deleteActivity(activity:Activity) {
-        getContext().deleteObject(activity)
-        saveManagedContext()
+        DataManager.deleteManagedObject(activity)
     }
-    
-    public class func saveManagedContext() {
-        var error : NSError? = nil
-        if !getContext().save(&error) {
-            NSLog("Unresolved error saving context \(error), \(error!.userInfo)")
-            abort()
-        }
-    }
-    
 
 }

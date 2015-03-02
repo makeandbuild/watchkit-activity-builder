@@ -14,7 +14,7 @@ class InterfaceController: WKInterfaceController {
 
     @IBOutlet weak var table: WKInterfaceTable!
 
-    var steps:[Step] = []
+    var steps:[Step] = [Step]()
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)

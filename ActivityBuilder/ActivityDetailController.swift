@@ -18,7 +18,7 @@ class ActivityDetailController: UIViewController, UITableViewDataSource, UITable
     
     var activity:Activity?
     
-    var steps = []
+    var steps = [Step]()
     
     @IBOutlet weak var nameField: UITextField!
     
@@ -53,7 +53,7 @@ class ActivityDetailController: UIViewController, UITableViewDataSource, UITable
         } else {
             // update existing activity
             activity?.name = nameField.text
-            ActivityManager.saveManagedContext()
+            DataManager.saveManagedContext()
         }
         
         self.navigationController?.popToRootViewControllerAnimated(true)
@@ -77,10 +77,19 @@ class ActivityDetailController: UIViewController, UITableViewDataSource, UITable
         let cell = tableView.dequeueReusableCellWithIdentifier(stepCellIdentifier, forIndexPath: indexPath) as! UITableViewCell
         
         let row = indexPath.row
-        var step = steps[row] as! Step
+        var step = steps[row]
         cell.textLabel?.text = step.name
         
         return cell
+    }
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.Delete {
+            var deletedStep = steps.removeAtIndex(indexPath.row)
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+            
+            StepManager.deleteStep(deletedStep)
+        }
     }
     
     
@@ -96,7 +105,7 @@ class ActivityDetailController: UIViewController, UITableViewDataSource, UITable
         } else if (segue.identifier == "stepDetail") {
             var selectedIndexPath:NSIndexPath = self.table.indexPathForSelectedRow()!
             
-            stepDetailController.step = steps[selectedIndexPath.row] as? Step
+            stepDetailController.step = steps[selectedIndexPath.row]
         }
     }
 

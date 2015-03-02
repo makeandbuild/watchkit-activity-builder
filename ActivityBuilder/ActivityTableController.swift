@@ -13,7 +13,7 @@ class ActivityTableController: UITableViewController {
     
     let cellIdentifier = "ActivityCell"
     
-    var activities = []
+    var activities = [Activity]()
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidLoad()
@@ -34,12 +34,20 @@ class ActivityTableController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! UITableViewCell
         
         let row = indexPath.row
-        var activity = activities[row] as! Activity
+        var activity:Activity = activities[row]
         cell.textLabel?.text = activity.name
         
         return cell
     }
-
+    
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.Delete {
+            var deletedActivity = activities.removeAtIndex(indexPath.row)
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+            
+            ActivityManager.deleteActivity(deletedActivity)
+        }
+    }
     
     
     // MARK: - Navigation
@@ -53,7 +61,7 @@ class ActivityTableController: UITableViewController {
         else if (segue.identifier == "showDetail") {
             var selectedIndexPath:NSIndexPath = self.tableView.indexPathForSelectedRow()!
             var activityDetailController:ActivityDetailController = segue.destinationViewController as! ActivityDetailController
-            activityDetailController.activity = activities[selectedIndexPath.row] as? Activity
+            activityDetailController.activity = activities[selectedIndexPath.row]
             
         }
         

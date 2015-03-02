@@ -18,13 +18,9 @@ public class StepManager: NSObject {
         return Static.instance
     }
     
-    class func getContext()->NSManagedObjectContext {
-        return WatchCoreDataProxy.sharedInstance.managedObjectContext!
-    }
-    
     public class func createStep(name: String, detail: String, number: Int16, status: String, activity:Activity) -> Step {
         
-        let newStep: Step = NSEntityDescription.insertNewObjectForEntityForName("Step", inManagedObjectContext: getContext()) as! Step
+        let newStep: Step = NSEntityDescription.insertNewObjectForEntityForName("Step", inManagedObjectContext: DataManager.getContext()) as! Step
         
         newStep.name = name
         newStep.detail = detail
@@ -32,7 +28,7 @@ public class StepManager: NSObject {
         newStep.status = status
         newStep.activity = activity
         
-        saveManagedContext()
+        DataManager.saveManagedContext()
         
         return newStep
     }
@@ -50,7 +46,7 @@ public class StepManager: NSObject {
         
         var error: NSError? = nil
         
-        if let steps:[Step] = getContext().executeFetchRequest(fetchRequest, error: &error) as? [Step] {
+        if let steps:[Step] = DataManager.getContext().executeFetchRequest(fetchRequest, error: &error) as? [Step] {
             return steps
         }
         else {
@@ -58,22 +54,8 @@ public class StepManager: NSObject {
         }
     }
     
-//    public class func fetchSteps(activity:Activity) {
-//        let fetchRequest = NSFetchRequest(entityName: "Step")
-//        
-//    }
-    
     public class func deleteStep(step:Step) {
-        getContext().deleteObject(step)
-        saveManagedContext()
-    }
-    
-    public class func saveManagedContext() {
-        var error : NSError? = nil
-        if !getContext().save(&error) {
-            NSLog("Unresolved error saving context \(error), \(error!.userInfo)")
-            abort()
-        }
+        DataManager.deleteManagedObject(step)
     }
 
 }
