@@ -13,13 +13,13 @@ class ActiveStepController: WKInterfaceController {
     
     var config: ActiveStepConfig?
     
+    @IBOutlet weak var activityNameLabel: WKInterfaceLabel!
+    
     @IBOutlet weak var stepNameButton: WKInterfaceButton!
     
     @IBOutlet weak var nextButton: WKInterfaceButton!
     
     @IBOutlet weak var finishButton: WKInterfaceButton!
-    
-//    @IBOutlet weak var previousButton: WKInterfaceButton!
     
     override func awakeWithContext(context: AnyObject?) {
         self.config = context as? ActiveStepConfig
@@ -27,11 +27,16 @@ class ActiveStepController: WKInterfaceController {
         var activeStep = config?.activeStep
         stepNameButton.setTitle(activeStep?.name)
         
-//        var prevEnabled = !config!.isFirstStep() && !config!.isOnlyStep()
-//        self.previousButton.setEnabled(prevEnabled)
-
-//        var nextEnabled = !config!.isLastStep() && !config!.isOnlyStep()
-//        self.nextButton.setEnabled(nextEnabled)
+        var font = UIFont.systemFontOfSize(20)
+        
+        var activityLabel = "Unknown"
+        if (activeStep?.activity != nil) {
+            activityLabel = activeStep!.activity.name
+        }
+        
+        var specialString = NSAttributedString(string: activityLabel, attributes: [NSFontAttributeName:font])
+        self.activityNameLabel.setAttributedText(specialString)
+        
         var nextHidden = config!.isLastStep() || config!.isOnlyStep()
         self.nextButton.setHidden(nextHidden)
         
@@ -41,7 +46,7 @@ class ActiveStepController: WKInterfaceController {
     
     
     @IBAction func showStepDetail() {
-        self.pushControllerWithName("detailActivityController", context: config?.activeStep)
+        self.pushControllerWithName("stepDetailController", context: config?.activeStep)
     }
 
     @IBAction func goToNextStep() {
@@ -49,12 +54,6 @@ class ActiveStepController: WKInterfaceController {
         self.pushControllerWithName("activeStepController", context: ActiveStepConfig(index: config!.index + 1, steps: config!.steps))
     }
     
-    // TODO: do we even need a previous?  I think you can just use the back button
-//    @IBAction func goToPreviousStep() {
-//        // should only be enabled if there really is a previous step
-//        self.pushControllerWithName("activeStepController", context: ActiveStepConfig(index: config!.index - 1, steps: config!.steps))
-//    }
-//    
     @IBAction func finishActivity() {
         self.popToRootController()
     }

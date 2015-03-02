@@ -12,6 +12,7 @@
 		FD1E92661AA3BDA000F2F2F9 /* StepRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1E92651AA3BDA000F2F2F9 /* StepRow.swift */; };
 		FD1E92681AA3D37000F2F2F9 /* ActivityRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1E92671AA3D37000F2F2F9 /* ActivityRow.swift */; };
 		FD1E926A1AA4CA9600F2F2F9 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1E92691AA4CA9600F2F2F9 /* DataManager.swift */; };
+		FD1E926C1AA4F2FA00F2F2F9 /* StepDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1E926B1AA4F2FA00F2F2F9 /* StepDetailController.swift */; };
 		FD24C1901A9E896300DB38D3 /* StartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD24C18F1A9E896300DB38D3 /* StartController.swift */; };
 		FD2C81E91A9CFD4700679983 /* WatchCoreDataProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = FD2C81E81A9CFD4700679983 /* WatchCoreDataProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FD2C81EF1A9CFD4700679983 /* WatchCoreDataProxy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD2C81E41A9CFD4700679983 /* WatchCoreDataProxy.framework */; };
@@ -40,7 +41,6 @@
 		FD7A9D651A9F8178003D5FFF /* ActivityDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7A9D641A9F8178003D5FFF /* ActivityDetailController.swift */; };
 		FD7A9D671A9F8432003D5FFF /* ActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7A9D661A9F8432003D5FFF /* ActivityManager.swift */; };
 		FD7FF5191AA0BCD8000E782D /* StepDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7FF5181AA0BCD8000E782D /* StepDetailController.swift */; };
-		FD8B2BD01A9E801A00C77A80 /* DetailActivityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8B2BCF1A9E801A00C77A80 /* DetailActivityController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +119,7 @@
 		FD1E92651AA3BDA000F2F2F9 /* StepRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepRow.swift; sourceTree = "<group>"; };
 		FD1E92671AA3D37000F2F2F9 /* ActivityRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityRow.swift; sourceTree = "<group>"; };
 		FD1E92691AA4CA9600F2F2F9 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		FD1E926B1AA4F2FA00F2F2F9 /* StepDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepDetailController.swift; sourceTree = "<group>"; };
 		FD24C18F1A9E896300DB38D3 /* StartController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartController.swift; sourceTree = "<group>"; };
 		FD2C81E41A9CFD4700679983 /* WatchCoreDataProxy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WatchCoreDataProxy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD2C81E71A9CFD4700679983 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -158,7 +159,6 @@
 		FD7A9D641A9F8178003D5FFF /* ActivityDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityDetailController.swift; sourceTree = "<group>"; };
 		FD7A9D661A9F8432003D5FFF /* ActivityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityManager.swift; sourceTree = "<group>"; };
 		FD7FF5181AA0BCD8000E782D /* StepDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepDetailController.swift; sourceTree = "<group>"; };
-		FD8B2BCF1A9E801A00C77A80 /* DetailActivityController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailActivityController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -320,11 +320,11 @@
 		FD5CA9941A9BBB6200AE72E1 /* ActivityBuilder WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				FD1E926B1AA4F2FA00F2F2F9 /* StepDetailController.swift */,
 				FD1E92671AA3D37000F2F2F9 /* ActivityRow.swift */,
 				FD1E92651AA3BDA000F2F2F9 /* StepRow.swift */,
 				FD1E92611AA3BB6700F2F2F9 /* ActivityListController.swift */,
 				FD1E92621AA3BB6700F2F2F9 /* StepListController.swift */,
-				FD8B2BCF1A9E801A00C77A80 /* DetailActivityController.swift */,
 				FD5CA99A1A9BBB6200AE72E1 /* NotificationController.swift */,
 				FD5CA99C1A9BBB6200AE72E1 /* GlanceController.swift */,
 				FD24C18F1A9E896300DB38D3 /* StartController.swift */,
@@ -661,7 +661,7 @@
 				FD1E92681AA3D37000F2F2F9 /* ActivityRow.swift in Sources */,
 				FD1E92661AA3BDA000F2F2F9 /* StepRow.swift in Sources */,
 				FD5CA99D1A9BBB6200AE72E1 /* GlanceController.swift in Sources */,
-				FD8B2BD01A9E801A00C77A80 /* DetailActivityController.swift in Sources */,
+				FD1E926C1AA4F2FA00F2F2F9 /* StepDetailController.swift in Sources */,
 				FD7A9D5F1A9F5A30003D5FFF /* ActiveStepConfig.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

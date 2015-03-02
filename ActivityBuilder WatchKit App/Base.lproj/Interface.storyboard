@@ -37,6 +37,8 @@
             <objects>
                 <controller identifier="activeStepController" id="J6d-zd-WsO" customClass="ActiveStepController" customModule="ActivityBuilder_WatchKit_Extension">
                     <items>
+                        <label alignment="left" text="Current Activity" id="6sE-Pe-09r"/>
+                        <separator alignment="left" id="mgS-Dy-ezs"/>
                         <button width="1" alignment="left" title="Step Name" id="JTu-Kq-nwe">
                             <color key="backgroundColor" red="0.44793752599999997" green="0.64997632579999998" blue="0.38403294360000001" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
@@ -57,6 +59,7 @@
                         </button>
                     </items>
                     <connections>
+                        <outlet property="activityNameLabel" destination="6sE-Pe-09r" id="kLe-ps-tPJ"/>
                         <outlet property="finishButton" destination="ixE-de-djr" id="68q-cN-5mL"/>
                         <outlet property="nextButton" destination="xKL-8Z-bpM" id="wUe-5G-GKt"/>
                         <outlet property="stepNameButton" destination="JTu-Kq-nwe" id="Ysv-lL-jEe"/>
@@ -65,10 +68,10 @@
             </objects>
             <point key="canvasLocation" x="646" y="400"/>
         </scene>
-        <!--detailActivityController-->
+        <!--stepDetailController-->
         <scene sceneID="j4b-TA-rcl">
             <objects>
-                <controller identifier="detailActivityController" id="O2v-NM-60h" customClass="DetailActivityController" customModule="ActivityBuilder_WatchKit_Extension">
+                <controller identifier="stepDetailController" id="O2v-NM-60h" customClass="StepDetailController" customModule="ActivityBuilder_WatchKit_Extension">
                     <items>
                         <label width="1" alignment="left" text="Name" textAlignment="left" id="e5B-fH-kzE"/>
                         <separator alignment="left" id="Ib8-lU-hP2"/>

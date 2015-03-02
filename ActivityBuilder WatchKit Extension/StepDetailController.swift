@@ -10,7 +10,7 @@ import WatchKit
 import WatchCoreDataProxy
 
 
-class DetailActivityController: WKInterfaceController {
+class StepDetailController: WKInterfaceController {
     
     @IBOutlet weak var nameLabel: WKInterfaceLabel!
     
