@@ -17,6 +17,8 @@ class ActiveStepController: WKInterfaceController {
     
     @IBOutlet weak var nextButton: WKInterfaceButton!
     
+    @IBOutlet weak var finishButton: WKInterfaceButton!
+    
 //    @IBOutlet weak var previousButton: WKInterfaceButton!
     
     override func awakeWithContext(context: AnyObject?) {
@@ -28,8 +30,13 @@ class ActiveStepController: WKInterfaceController {
 //        var prevEnabled = !config!.isFirstStep() && !config!.isOnlyStep()
 //        self.previousButton.setEnabled(prevEnabled)
 
-        var nextEnabled = !config!.isLastStep() && !config!.isOnlyStep()
-        self.nextButton.setEnabled(nextEnabled)
+//        var nextEnabled = !config!.isLastStep() && !config!.isOnlyStep()
+//        self.nextButton.setEnabled(nextEnabled)
+        var nextHidden = config!.isLastStep() || config!.isOnlyStep()
+        self.nextButton.setHidden(nextHidden)
+        
+        // TODO: - maybe show on every screen page?
+        self.finishButton.setHidden(!nextHidden)
     }
     
     
@@ -48,4 +55,7 @@ class ActiveStepController: WKInterfaceController {
 //        self.pushControllerWithName("activeStepController", context: ActiveStepConfig(index: config!.index - 1, steps: config!.steps))
 //    }
 //    
+    @IBAction func finishActivity() {
+        self.popToRootController()
+    }
 }

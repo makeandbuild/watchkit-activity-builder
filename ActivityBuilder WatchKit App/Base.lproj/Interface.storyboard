@@ -49,8 +49,15 @@
                                 <action selector="goToNextStep" destination="J6d-zd-WsO" id="9AJ-no-rci"/>
                             </connections>
                         </button>
+                        <button width="1" alignment="left" title="Finish" id="ixE-de-djr">
+                            <color key="backgroundColor" red="0.58039215686274515" green="0.17571235591408413" blue="0.18526200849907451" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="finishActivity" destination="J6d-zd-WsO" id="8Uo-2Z-6W8"/>
+                            </connections>
+                        </button>
                     </items>
                     <connections>
+                        <outlet property="finishButton" destination="ixE-de-djr" id="68q-cN-5mL"/>
                         <outlet property="nextButton" destination="xKL-8Z-bpM" id="wUe-5G-GKt"/>
                         <outlet property="stepNameButton" destination="JTu-Kq-nwe" id="Ysv-lL-jEe"/>
                     </connections>
