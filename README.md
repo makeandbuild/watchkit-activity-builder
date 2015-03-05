@@ -1,6 +1,8 @@
 # Apple WatchKit Activity Builder
 Demo app for iOS with Apple WatchKit
 
+This code goes along with the blog post [WatchKit with Shared Core Data](http://makeandbuild.com/blog/post/watchkit-with-shared-core-data)
+
 *Written using Xcode 6.3 beta 2, including iOS 8.3 SDK with Swift 1.2 which was released Feb 23, 2015.*
 
 On the iOS side, we built a simple ToDo list type app that allows you to create different activities and add steps to each activity.  The idea is that you’d create activities using your iOS device beforehand and when you’re ready you’d view the steps of the activity on your Apple Watch.  For example you could use it to plan your workouts steps or even save your favorite recipes. When you’re ready to do your workout or prepare your favorite dish, you can use the watch app to select the activity you programmed.  Once you start an activity the watch will show you one step at a time until you’ve completed the entire activity.
